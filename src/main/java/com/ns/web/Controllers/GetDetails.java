@@ -38,7 +38,6 @@ public class GetDetails extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// String message = null;
 		HttpSession session = null;
 		String firstnameDB = null;
 		String lastnameDB = null;
@@ -63,11 +62,6 @@ public class GetDetails extends HttpServlet {
 			log.info("lastname : " + lastnameDB);
 			log.info("emqail ID : " + emailDB);
 			log.info("password : " + passwordDB);
-			/*
-			 * session.setAttribute("firstname", firstnameDB);
-			 * session.setAttribute("lastname", lastnameDB); session.setAttribute("emailID",
-			 * emailDB); session.setAttribute("password", passwordDB);
-			 */
 			
 			htmlContent = "<div class=\"datalist\">"
 							+ "<table>\r\n"
@@ -100,12 +94,12 @@ public class GetDetails extends HttpServlet {
 			session.setAttribute("htmlContent", htmlContent);
 
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 
 		response.sendRedirect("jsp/Welcome.jsp");
-		// response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 	}
 
 	/**
@@ -114,10 +108,8 @@ public class GetDetails extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//doGet(request, response);
-		HttpSession session = null;
-		session= request.getSession();
+		
+		HttpSession session = request.getSession();
 		session.setAttribute("htmlContent", "");
 		response.sendRedirect("jsp/Welcome.jsp");
 		

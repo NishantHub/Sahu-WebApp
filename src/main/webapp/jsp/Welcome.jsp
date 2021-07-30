@@ -30,6 +30,6 @@
 			<button type="submit" value="View Details">View details.</button>
 		</form>
 	</div>
-		${htmlContent}
+	${htmlContent}
 </body>
 </html>
