@@ -69,7 +69,8 @@ public class GetDetails extends HttpServlet {
 			 * emailDB); session.setAttribute("password", passwordDB);
 			 */
 			
-			htmlContent = "<table>\r\n"
+			htmlContent = "<div class=\"datalist\">"
+					+ "<table>\r\n"
 					+ "		<tbody>\r\n"
 					+ "			<tr>\r\n"
 					+ "				<td><p>First Name </p></td>\r\n"
@@ -88,7 +89,13 @@ public class GetDetails extends HttpServlet {
 					+ "				<td><p>"+passwordDB+"</p></td>\r\n"
 					+ "			</tr>\r\n"
 					+ "		</tbody>\r\n"
-					+ "	</table>";
+					+ "	</table>"
+					+ "</div>"
+					+ "<div class=\"Form\">"
+					+ "<form method=\"post\" action=\"http://localhost:8080/sahu-webapp/GetDetails\">\r\n"
+					+ "<button type=\"submit\" value=\"Hide details\">Hide details</button>\r\n"
+					+ "</form>"
+					+ "</div>";
 			
 			session.setAttribute("htmlContent", htmlContent);
 
@@ -108,7 +115,12 @@ public class GetDetails extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		//doGet(request, response);
+		HttpSession session = null;
+		session= request.getSession();
+		session.setAttribute("htmlContent", "");
+		response.sendRedirect("jsp/Welcome.jsp");
+		
 	}
 
 }

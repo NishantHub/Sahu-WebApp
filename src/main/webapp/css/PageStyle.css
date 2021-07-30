@@ -102,11 +102,13 @@ body {
 }
 
 .datalist {
+	padding: 10px 70px;
 	background: #ffffff;
 }
 
-.datalist table, th, td {
-	float: center;
+.datalist table, td {
+	margin-left: auto;
+  	margin-right: auto;
 	border: 1px solid black;
 	color: #ffffff;
 	background: #333;

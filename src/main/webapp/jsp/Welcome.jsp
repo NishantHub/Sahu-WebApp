@@ -27,8 +27,7 @@
 	<div class="Form">
 		<form method="get"
 			action="http://localhost:8080/sahu-webapp/GetDetails">
-			<button type="submit" value="View Details">View your
-				details.</button>
+			<button type="submit" value="View Details">View details.</button>
 		</form>
 	</div>
 	<div class="datalist">
