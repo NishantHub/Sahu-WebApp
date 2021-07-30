@@ -30,8 +30,6 @@
 			<button type="submit" value="View Details">View details.</button>
 		</form>
 	</div>
-	<div class="datalist">
 		${htmlContent}
-	</div>
 </body>
 </html>
