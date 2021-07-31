@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +8,7 @@
 <link rel="stylesheet" type="text/css" href="../css/PageStyle.css" />
 </head>
 <body>
-<body>
-	<div class="topnav">
+<div class="topnav">
 		<form method="post" action="http://localhost:8080/sahu-webapp/Home">
 			<button type= "submit" value=Home>Home</button>
 		</form>
@@ -41,4 +40,5 @@
 			<a href="http://localhost:8080/sahu-webapp/jsp/SignUp.jsp">Sign Up</a>
 		</div>
 	</form>
+</body>
 </html>
